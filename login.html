@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="google-login">
+            <p>Or login with:</p>
+            <div id="g_id_onload"
+                 data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                 data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin" data-type="standard"></div>
+        </div>
+        <div class="signup-link">
+            <p>Don't have an account?</p>
+            <a href="signup.html"><button>Sign Up</button></a>
+        </div>
+    </div>
+    <script>
+        function handleCredentialResponse(response) {
+            // Handle the Google Sign-In response here
+            console.log("Encoded JWT ID token: " + response.credential);
+            // You can send this token to your server for verification
+        }
+    </script>
+</body>
+</html>

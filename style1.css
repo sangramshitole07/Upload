@@ -1,0 +1,130 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #a67fdb, #7aa7fc, #6fc3e0, #6fe0c7);
+    background-size: 400% 400%;
+    margin: 0;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container for Login Box */
+.login-container {
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Form Title */
+.login-container h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Input Fields */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Input Focus Effect */
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #a67fdb;
+    box-shadow: 0 0 10px rgba(166, 127, 219, 0.1);
+    outline: none;
+}
+
+/* Submit Button */
+.login-container button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #a67fdb, #7aa7fc);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect on Button */
+.login-container button[type="submit"]:hover {
+    background: linear-gradient(to right, #7aa7fc, #a67fdb);
+    box-shadow: 0 5px 15px rgba(122, 167, 252, 0.4);
+}
+
+/* Google Login Section */
+.google-login {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.google-login p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Sign Up Link Section */
+.signup-link {
+    margin-top: 25px;
+}
+
+.signup-link p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Sign Up Button */
+.signup-link button {
+    background-color: transparent;
+    color: #a67fdb;
+    border: 2px solid #a67fdb;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.signup-link button:hover {
+    background-color: #a67fdb;
+    color: white;
+}
