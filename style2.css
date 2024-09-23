@@ -1,0 +1,156 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+/* Background with Smoother Gradient and Animation */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ff7e5f, #feb47b, #7debff, #6be585);
+    background-size: 400% 400%;
+    margin: 0;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Refined Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 0.8s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(20px);
+}
+
+.login-container:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form Title - Modern Typography */
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+    animation: slideDown 0.6s ease-out;
+    letter-spacing: 1.5px;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Input Fields with Soft Shadow */
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f7f7f7;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #7debff;
+    outline: none;
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgba(125, 235, 255, 0.3);
+    background-color: #ffffff;
+}
+
+/* Sign Up Button with Gradient and Depth */
+.login-container button[type="submit"] {
+    width: 100%;
+    padding: 12px 0;
+    background: linear-gradient(45deg, #7debff, #6be585);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(107, 229, 133, 0.2);
+}
+
+.login-container button[type="submit"]:hover {
+    background: linear-gradient(45deg, #6be585, #7debff);
+    transform: scale(1.06);
+    box-shadow: 0 10px 25px rgba(107, 229, 133, 0.4);
+}
+
+/* Social Sign Up Section */
+.social-signup {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* Refined Login Link Section */
+.login-link {
+    margin-top: 25px;
+    animation: fadeIn 0.8s ease-out 0.5s both;
+}
+
+.login-link p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.login-link button {
+    background-color: transparent;
+    color: #7debff;
+    border: 2px solid #7debff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.login-link button:hover {
+    background-color: #7debff;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(125, 235, 255, 0.3);
+}
+.social-signup p {
+    margin-bottom: 15px;
+}
+
+.g_id_signin {
+    margin-top: 10px;
+}
